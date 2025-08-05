@@ -11,6 +11,9 @@ import PaymentOptions from './pages/PaymentOptions';
 import MyProducts from './pages/MyProducts';
 import MyOrders from './pages/MyOrders';
 import MySales from './pages/MySales';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import './App.css'; // Keep for general styles or remove if fully MUI
 
@@ -78,6 +81,9 @@ function App() {
               <Route path="/my-products" element={<MyProducts />} />
               <Route path="/my-orders" element={<MyOrders />} />
               <Route path="/my-sales" element={<MySales />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/skills" element={<Skills />} />
             </Routes>
           </div>
           <Footer />

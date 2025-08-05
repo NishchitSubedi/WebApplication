@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import {
   Box, Typography, Card, CardContent, CardMedia, Grid, Button, Paper,
-  Container, Stack, Chip, Avatar, IconButton, Dialog, DialogTitle,
-  DialogContent, DialogActions, Alert, Badge, TextField, InputAdornment,
+  Container, Stack, Chip, TextField, InputAdornment,
   FormControl, InputLabel, Select, MenuItem, Fab
 } from '@mui/material';
 import {
-  ShoppingCart, LocalShipping, CheckCircle, Cancel, Receipt,
-  Star, LocalOffer, Gamepad, Security, Diamond, MoreVert,
-  Payment, Schedule, Done, Error, Search, FilterList, Add,
-  TrendingUp, AttachMoney, Sell
+  ShoppingCart, Star, Security, TrendingUp, AttachMoney, Sell, Search
 } from '@mui/icons-material';
 import SellProduct from '../components/SellProduct';
 import BuyProductModal from '../components/BuyProductModal';
-import axios from 'axios';
 
 // Mock data for demonstration
 const mockProducts = [

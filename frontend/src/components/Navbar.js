@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   AppBar, Toolbar, Typography, Button, Box, Menu, MenuItem,
-  IconButton, Avatar, Chip
+  IconButton, Chip
 } from '@mui/material';
 import {
-  Menu as MenuIcon, AccountCircle, ShoppingCart, Work
+  Menu as MenuIcon, AccountCircle, ShoppingCart
 } from '@mui/icons-material';
 
 const Navbar = () => {
@@ -84,6 +84,60 @@ const Navbar = () => {
             }}
           >
             Portfolio
+          </Button>
+          
+          <Button
+            component={Link}
+            to="/projects"
+            sx={{
+              color: isActive('/projects') ? '#4ecdc4' : 'white',
+              fontWeight: isActive('/projects') ? 700 : 500,
+              borderRadius: 2,
+              px: 3,
+              py: 1,
+              '&:hover': {
+                backgroundColor: 'rgba(78, 205, 196, 0.1)',
+                color: '#4ecdc4'
+              }
+            }}
+          >
+            Projects
+          </Button>
+
+          <Button
+            component={Link}
+            to="/skills"
+            sx={{
+              color: isActive('/skills') ? '#4ecdc4' : 'white',
+              fontWeight: isActive('/skills') ? 700 : 500,
+              borderRadius: 2,
+              px: 3,
+              py: 1,
+              '&:hover': {
+                backgroundColor: 'rgba(78, 205, 196, 0.1)',
+                color: '#4ecdc4'
+              }
+            }}
+          >
+            Skills
+          </Button>
+
+          <Button
+            component={Link}
+            to="/contact"
+            sx={{
+              color: isActive('/contact') ? '#4ecdc4' : 'white',
+              fontWeight: isActive('/contact') ? 700 : 500,
+              borderRadius: 2,
+              px: 3,
+              py: 1,
+              '&:hover': {
+                backgroundColor: 'rgba(78, 205, 196, 0.1)',
+                color: '#4ecdc4'
+              }
+            }}
+          >
+            Contact
           </Button>
           
           <Button
@@ -271,6 +325,30 @@ const Navbar = () => {
             sx={{ color: 'white', '&:hover': { bgcolor: 'rgba(78, 205, 196, 0.1)' } }}
           >
             Portfolio
+          </MenuItem>
+          <MenuItem 
+            component={Link} 
+            to="/projects" 
+            onClick={handleMenuClose}
+            sx={{ color: 'white', '&:hover': { bgcolor: 'rgba(78, 205, 196, 0.1)' } }}
+          >
+            Projects
+          </MenuItem>
+          <MenuItem 
+            component={Link} 
+            to="/skills" 
+            onClick={handleMenuClose}
+            sx={{ color: 'white', '&:hover': { bgcolor: 'rgba(78, 205, 196, 0.1)' } }}
+          >
+            Skills
+          </MenuItem>
+          <MenuItem 
+            component={Link} 
+            to="/contact" 
+            onClick={handleMenuClose}
+            sx={{ color: 'white', '&:hover': { bgcolor: 'rgba(78, 205, 196, 0.1)' } }}
+          >
+            Contact
           </MenuItem>
           <MenuItem 
             component={Link} 
